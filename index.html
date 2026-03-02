@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>भारतीय किसान यूनियन – भगत सिंह</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="hero">
+  <h1>भारतीय किसान यूनियन – भगत सिंह</h1>
+  <nav>
+    <a href="#news">समाचार</a>
+    <a href="#gallery">गैलरी</a>
+    <a href="#leaders">नेतृत्व</a>
+    <a href="#join">सदस्यता</a>
+    <a href="#donate">दान</a>
+  </nav>
+</header>
+
+<main class="container">
+
+<section id="news">
+  <h2>समाचार</h2>
+  <div id="newsList" class="cards">लोड हो रहा…</div>
+</section>
+
+<section id="gallery">
+  <h2>गैलरी</h2>
+  <div id="galList" class="grid">लोड हो रहा…</div>
+</section>
+
+<section id="leaders">
+  <h2>नेतृत्व</h2>
+  <div id="leadList" class="cards">लोड हो रहा…</div>
+</section>
+
+<section id="join">
+  <h2>सदस्यता</h2>
+
+  <label>नाम</label><input id="m-name">
+  <label>ईमेल (OTP)</label><input id="m-email">
+  <label>मोबाइल</label><input id="m-mobile">
+  <label>वैकल्पिक मोबाइल</label><input id="m-alt">
+  <label>राज्य</label><select id="m-state"></select>
+  <label>जिला</label><select id="m-district"></select>
+  <label>शहर</label><input id="m-city">
+  <label>फोटो</label><input type="file" id="m-photo">
+
+  <button onclick="sendOtp()">OTP भेजें</button>
+  <input id="m-otp" placeholder="OTP">
+  <button onclick="verifyOtp()">OTP Verify</button>
+  <button onclick="registerMember()">सदस्यता बनाएं</button>
+
+  <div id="m-msg"></div>
+</section>
+
+<section id="donate">
+  <h2>दान</h2>
+  <label>नाम</label><input id="d-name">
+  <label>मोबाइल</label><input id="d-mobile">
+  <label>राशि (₹)</label><input id="d-amount" value="100">
+  <img src="assets/upi_qr.png" style="max-width:200px;border:2px solid #fff;border-radius:5px;margin:10px 0;">
+
+  <button onclick="upiIntent()">UPI ऐप से भुगतान</button>
+  <input id="d-ref" placeholder="भुगतान का रेफ़रेंस">
+  <button onclick="logDonation()">भुगतान दर्ज करें</button>
+
+  <div id="d-msg"></div>
+</section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
